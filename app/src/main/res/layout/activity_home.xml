@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Darren"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="0dp"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find and Get Your Best Cake"
+        android:textColor="#777777"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="0dp"/>
+
+    <!-- Search Box -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_background"
+        android:hint="Search"
+        android:paddingStart="15dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:textSize="14sp" />
+
+    <!-- Slideshow -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerSlideshow"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"/>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"/>
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom|end"
+           android:id="@+id/fab_add"
+           android:layout_marginBottom="10dp"
+           android:layout_marginEnd="10dp"
+           android:src="@drawable/ic_add"/>
+   </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/ivProductImage"
+            android:layout_width="150dp"
+            android:layout_height="139dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cake" />
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Black forest Cake"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvdescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Black forest Cake"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Price and Add Button Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!-- Price -->
+            <TextView
+                android:id="@+id/tvProductPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="1950 VNĐ"
+                android:textColor="#FF5722"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+            <!-- Add Button -->
+            <ImageButton
+                android:id="@+id/btnAddProduct"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/add_button_background"
+                android:padding="8dp"
+                android:src="@drawable/ic_add"
+                android:contentDescription="Add Product" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
